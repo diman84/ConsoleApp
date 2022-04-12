@@ -12,8 +12,14 @@ namespace ConsoleApp
 
             var calculation = Calculator.Calculate(formula);
 
-            Console.WriteLine(calculation.Result);
-            Console.WriteLine(calculation.IsValid);
+            if (calculation.IsValid)
+            {
+                Console.WriteLine(calculation.Result);
+            }
+            else 
+            {
+                Console.WriteLine("Неверная формула");
+            }
         }
     }
 }
